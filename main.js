@@ -4,6 +4,23 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
+const likeBtn = document.querySelector(".like");
+let likeIcon = document.querySelector("#like-glyph");
+  //count = document.querySelector("#count");
+
+  let clicked = false;
+
+  likeBtn.addEventListener("click", () => {
+    if (!clicked) {
+      clicked = true;
+      likeIcon.innerHTML = FULL_HEART ;
+      count.textContent++;
+    } else {
+      clicked = false;
+      likeIcon.innerHTML =EMPTY_HEART  ;
+      count.textContent--;
+    }
+  });
 
 
 
